@@ -24,7 +24,7 @@
   
 	2- Se o próximo adversário  aceitar o pedido de truco, então aquela mão passa a valer 4 "tentos". Sendo possível que, de forma alternada, as duplas aumentem o valor da mão para 6, 9, ou 12 "tentos". Note que a cada aumento do valor da mão, uma dupla pode desistir daquela mão, sedendo um valor em pontos igual ao ultimo aumento acordado.
 
-- Quando um jogador, ou sua dupla, possuem 10 "tentos" (chamada de "mão de 10"), nenhum jogador é autorizado a pedir truco nessa mão. Caso peça, sederá 2 "tentos" ao adversário, pois perderá a mão.
+- Quando um jogador, ou sua dupla, possuem 10 "tentos" (chamada de "mão de 10"), nenhum jogador é autorizado a pedir truco nessa mão. Caso peça, cederá 2 "tentos" ao adversário, pois perderá a mão.
 
 - Quando um jogador, ou sua dupla, estiverem na "mão de 10", a mão passa a valer 4 "tentos" por padrão.
 
