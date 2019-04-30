@@ -4,8 +4,6 @@
 
 - Uma partida de Truco Mineiro pode ter 2 jogadores, sendo 1 contra 1, ou pode ter 4 jogadores, jogando 2 duplas. No caso de uma partida com 2 duplas, os jogadores de cada dupla sentam-se de forma alternada.
 
-- Cada partida é composta por um número máximo de 11 mãos.
-
 - No início de cada mão, cada jogador recebe 3 cartas aleatórias.
 
 - Cada mão vale por padrão 2 "tentos" (pontos), e é composta por 3 rodadas.
