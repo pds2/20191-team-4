@@ -20,7 +20,7 @@
 
 - Se um jogador pede truco, ocorrem duas situações:
 	
-	1- Se o próximo adversário não aceitar o pedido de truco, então ele perde a queda.
+	1- Se o próximo adversário não aceitar o pedido de truco, então ele perde a mão.
   
 	2- Se o próximo adversário  aceitar o pedido de truco, então aquela mão passa a valer 4 "tentos". Sendo possível que, de forma alternada, as duplas aumentem o valor da mão para 6, 9, ou 12 "tentos". Note que a cada aumento do valor da mão, uma dupla pode desistir daquela mão, sedendo um valor em pontos igual ao ultimo aumento acordado.
 
