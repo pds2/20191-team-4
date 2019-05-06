@@ -2,7 +2,7 @@
 
 ## Truco Mineiro - User Stories
 
-- Uma partida de Truco Mineiro pode ter 2 jogadores, sendo 1 contra 1, ou pode ter 4 jogadores, jogando 2 duplas. No caso de uma partida com 2 duplas, os jogadores de cada dupla sentam-se de forma alternada.
+- Como um jogador, em uma partida de Truco Mineiro , eu posso jogar contra outro jogador em uma partida 1 x 1, ou pode ter 4 jogadores, jogando 2 duplas. No caso de uma partida com 2 duplas, os jogadores de cada dupla sentam-se de forma alternada.
 
 - No início de cada mão, cada jogador recebe 3 cartas aleatórias.
 
