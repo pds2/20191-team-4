@@ -10,8 +10,6 @@
 
 - Como jogador, quero ter a possibilidade de embaralhar a primeira mão do jogo. Neste caso, o próximo jogador será sempre o que está a minha direita.
 
-- Para começar, o jogador escolhido na etapa anterior coloca uma carta de sua mão na mesa, podendo desde o início pedir truco, ou não.
-
 - Como jogador, se eu for o escolhido para iniciar a rodada, devo colocar uma carta a mesa, podendo pedir truco ou não.
 
 - Eu, como jogador, posso colocar uma carata virada para baixo(de coberta), exceto quando estou abrindo a rodada. Essa carta tem valor nulo na rodada.
@@ -27,7 +25,6 @@
 
 - Eu como jogador, ou em dupla, não posso pedir truco quando tiver dez tentos em uma queda(mão de dez). Se pedir truco nessa situação cederei 2 tentos ao adversário. 
 
-- Quando um jogador, ou sua dupla, estiverem na "mão de 10", a mão passa a valer 4 "tentos" por padrão.
 -Como jogador ou em dupla, se estiver na mão de 10, cada derrota ou vitória que eu obter na mão valerá 4 tentos, ao invés de 2
 
 - Como jogador, ganho uma queda ao atingir 12 tentos.
