@@ -19,6 +19,7 @@ int main(){
     obj.ImprimeBaralho(); //testa se baralho foi montado corretamente
       
 //"Embaralhando" o baralho (comprando cartas aleatorias)...........
+    
     srand(time(0));
 
     int auxCarta = 0;//conta quantas carta ja existem na mao do jogador
