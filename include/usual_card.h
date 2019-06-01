@@ -14,7 +14,8 @@ class UsualCard : public Card {
     private:
         Suits _suit;
     public:
-        UsualCard(int rank, Suits suit); //Construtor
+        UsualCard(Rank rank, Suits suit); // Construtor
+        UsualCard(int rank, int suit); //Construtor
         Suits get_suit() const; //Retorna naipe
         virtual void print_card(); //Imprime carta
 };
