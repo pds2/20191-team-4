@@ -12,10 +12,10 @@ class Joker : public Card {
     private:
         Color _color;
     public:
-        Joker(Rank rank, Color Color); // Construtor
-        Joker(int rank, int color); //Construtor
-        Color get_color() const; //Retorna Cor
-        virtual void print_card(); //Imprime carta
+        Joker(Rank rank, Color Color); //Constructor
+        Joker(int rank, int color); //Constructor
+        Color get_color() const;
+        virtual void print_card(); //Print card in string format
 };
 
 #endif
