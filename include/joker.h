@@ -12,7 +12,8 @@ class Joker : public Card {
     private:
         Color _color;
     public:
-        Joker(int rank, Color color); //Construtor
+        Joker(Rank rank, Color Color); // Construtor
+        Joker(int rank, int color); //Construtor
         Color get_color() const; //Retorna Cor
         virtual void print_card(); //Imprime carta
 };
