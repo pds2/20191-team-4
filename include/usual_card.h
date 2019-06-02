@@ -14,10 +14,10 @@ class UsualCard : public Card {
     private:
         Suits _suit;
     public:
-        UsualCard(Rank rank, Suits suit); // Construtor
-        UsualCard(int rank, int suit); //Construtor
-        Suits get_suit() const; //Retorna naipe
-        virtual void print_card(); //Imprime carta
+        UsualCard(Rank rank, Suits suit); //Constructor
+        UsualCard(int rank, int suit); //Constructor
+        Suits get_suit() const;
+        virtual void print_card(); //Print card in string format
 };
 
 #endif

@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <string>
 
-enum Rank {
+enum Rank { //All possible ranks
     Four = 1,
     Five,
     Six,
@@ -18,23 +18,23 @@ enum Rank {
     Ace,
     Two,
     Three,
-    SevenOfDiamonds, // Sete de copas
-    AceOfSpades, // Espadilha
-    SevenOfHearts, // Sete de ouros
-    FourOfClubs, // Zap
-    RedJoker = 10,
-    BlackJoker = 11
+    SevenOfDiamonds, //Sete de copas
+    AceOfSpades, //Espadilha
+    SevenOfHearts, //Sete de ouros
+    FourOfClubs, //Zap
+    RedJoker = 10, //Curinga Vermelho
+    BlackJoker = 11 //Curinga Preto
 };
 
 class Card {
     private:
         Rank _rank;
     public:
-        Card(Rank rank);
-        Card(int rank);
-        ~Card();
-        virtual Rank get_rank() const; // Retorna rank
-        virtual void print_card() = 0; //POLIMORFISMO
+        Card(Rank rank); //Constructor
+        Card(int rank); //Constructor
+        virtual ~Card(); //Descructor
+        virtual Rank get_rank() const; //Return rank
+        virtual void print_card() = 0; //Polymorphic method
 };
 
 #endif

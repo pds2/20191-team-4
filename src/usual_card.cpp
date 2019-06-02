@@ -25,7 +25,6 @@ Suits UsualCard::get_suit() const {
     return this->_suit;
 }
 
-// Imprime carta (STRING)
 void UsualCard::print_card(){
     int suit = this->_suit;
     int rank = this->get_rank();
@@ -84,5 +83,4 @@ void UsualCard::print_card(){
     }
 
     std::cout << rank_string << " of " << suit_string << std::endl;
-
 }

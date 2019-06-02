@@ -9,7 +9,10 @@ int main(){
 
     deck.print_deck();
 
-    //deck.~Deck();
+    std::cout << "Shuffling deck..." << std::endl;
+    deck.shuffle_deck();
+
+    deck.print_deck();
 
     return 0;
 }

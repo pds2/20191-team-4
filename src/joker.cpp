@@ -21,7 +21,6 @@ Color Joker::get_color() const {
 
 void Joker::print_card(){
     int color = this->_color;
-
     std::string color_string;
     
     switch (color)
@@ -35,5 +34,4 @@ void Joker::print_card(){
     }
 
     std::cout << color_string << " Joker" << std::endl;
-    
 }
