@@ -49,14 +49,14 @@ void Deck::shuffle_deck(){
     std::random_shuffle(deck.begin(), deck.end());
 }
 
-void show_card(Card *card){
+void show_deck_card(Card *card){
     card->print_card();
 }
 
 void Deck::print_deck(){
     std::vector<Card*>::iterator it;
     for(it = deck.begin(); it != deck.end(); ++it){
-        show_card(*it);
+        show_deck_card(*it);
     }
 }
 
