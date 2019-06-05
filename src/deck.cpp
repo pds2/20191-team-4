@@ -60,5 +60,11 @@ void Deck::print_deck(){
     }
 }
 
-
+Card* Deck::draw_card(){
+    Card* card = this->deck[0]; //get the first card of the deck
+    std::vector<Card*>::iterator it;
+    it = this->deck.begin();
+    this->deck.erase(it); //remove the first card of the deck
+    return card; // return first card
+}
 
