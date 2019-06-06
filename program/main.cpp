@@ -21,6 +21,7 @@ int main(){
     std::cout << "Pegando a primeira carta do deck.." << std::endl;
     Card* card = deck.draw_card();
     std::cout << "Carta retirada: ";
+    teste1
     card->print_card();
     std::cout << std::endl;
     std::cout << std::endl;
