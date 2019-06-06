@@ -45,6 +45,10 @@ Deck::~Deck(){
     this->deck.clear();
 }
 
+int myrand(int i){
+    return std::rand()%i;
+}
+
 void Deck::shuffle_deck(){
     std::random_shuffle(deck.begin(), deck.end());
 }
