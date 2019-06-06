@@ -1,7 +1,6 @@
 #ifndef _DECK_H
 #define _DECK_H
 
-#include <vector>
 #include "card.h"
 #include "usual_card.h"
 #include "joker.h"

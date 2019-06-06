@@ -1,11 +1,14 @@
 #ifndef _CARD_H
 #define _CARD_H
 
-#include <iostream>
-#include <algorithm>
+#include <iostream>     // std::cout, std::cin
+#include <algorithm>    // std::random_shuffle
 #include <stdio.h>
 #include <stdlib.h>
-#include <string>
+#include <string>       // std::string
+#include <vector>       // std::vector
+#include <ctime>        // std::time
+#include <cstdlib>      // std::rand, std::srand
 
 enum Rank { //All possible ranks
     Four = 1,
