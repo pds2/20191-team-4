@@ -1,16 +1,20 @@
+#include "game.h"
 #include "card.h"
 #include "usual_card.h"
 #include "joker.h"
 #include "deck.h"
 #include "hand.h"
 
+
 int main(){
 
-    Deck deck = Deck();
+    //variables declaration
+    bool game_looping = true;
+    int firstPlayer = 0;
 
-    deck.shuffle_deck();
-    deck.print_deck();
-    std::cout << std::endl;
+    //------------------------------------------------------------------------------
+    
+    //deck.print_deck();
 
     //std::cout << "Shuffling deck..." << std::endl;
     //deck.shuffle_deck();
@@ -26,22 +30,64 @@ int main(){
     std::cout << std::endl;
     std::cout << std::endl;
     */
+
+    Game game = Game();
+
+    while(game_looping == true){
+
+        //inicio do jogo.....
+        Deck deck = Deck();
+        deck.shuffle_deck();
+
+        //cria a mao do player e das tres IA's....
+        std::cout << "Creating your hand..." << std::endl;
+        Hand playerHand = Hand(&deck);//mao player
+        std::cout << "Your hand is:" << std::endl;
+        playerHand.print_hand();
+
+        Hand ia1Hand = Hand(&deck);//mao IA aliada
+        Hand ia2Hand = Hand(&deck);//mao IA oponente
+        Hand ia3Hand = Hand(&deck);//mao IA oponente
+/*
+        std::cout << "IA1Hand:" << std::endl;
+        ia1Hand.print_hand();
+        std::cout << "IA2Hand:" << std::endl;
+        ia2Hand.print_hand();
+        std::cout << "IA3Hand:" << std::endl;
+        ia3Hand.print_hand();
+*/
+        std::cout << std::endl;
+
+        //Sorteia o primeiro a jogar uma carta.....
+        //firstPlayer = std::rand()%4;
+
+/* 
+        int card_pos;
+        std::cout << "Discarding card: ";
+        std::cin >> card_pos;
+        hand.discard(card_pos);
+*/
+
+        //testa condicao de final de queda
+        if(game.getScore_t1() >= 12){
+
+            game.setFinal_scoreboard1();
+            game.reset_scoreboard();
+
+        }else if(game.getScore_t2() >= 12){
+
+            game.setFinal_scoreboard2();
+            game.reset_scoreboard();
+        }
+
+        deck.~Deck();//coloquei essa chama aqui só pra poder compilar kkkk
+
+        //testa condicao de fim da partida (acabou a melhor de três)
+        //ATENCAO: essa deve ser a ultima linha dentro do game looping....
+        game_looping = game.check_end();
+    }
     
-    std::cout << "Creating hand..." << std::endl;
-    Hand hand = Hand(&deck);
-    std::cout << "Hand:" << std::endl;
-    hand.print_hand();
-
-    int card_pos;
-    std::cout << "Discarding card: ";
-    std::cin >> card_pos;
-    hand.discard(card_pos);
-
-    std::cout << "Hand:" << std::endl;
-    hand.print_hand();
-
-    std::cout << std::endl;
-    
+    game.print_winner();
 
     // deck.print_deck();
 
