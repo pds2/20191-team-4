@@ -4,6 +4,8 @@
 #include "joker.h"
 #include "deck.h"
 #include "hand.h"
+#include <ctime>    // For time() 
+#include <cstdlib>  // For srand() and rand()   
 
 
 int main(){
@@ -11,7 +13,6 @@ int main(){
     //variables declaration
     bool game_looping = true;
     int firstPlayer = 0;
-
     //------------------------------------------------------------------------------
     
     //deck.print_deck();
@@ -31,9 +32,31 @@ int main(){
     std::cout << std::endl;
     */
 
+    //INICIALIZAÇÃO DO JOGO//
     Game game = Game();
+    srand(time(0));
 
+
+    //GAME LOOPING//
     while(game_looping == true){
+        //pontos da partida inicial.
+        game.setPoints(2);
+
+        //testando o truco
+        /*
+        std::cout << game.getPoints() << std::endl;
+        game.increasePoint();
+        std::cout << game.getPoints() << std::endl;
+        game.increasePoint();
+        std::cout << game.getPoints() << std::endl;
+        game.increasePoint();
+        std::cout << game.getPoints() << std::endl;
+        game.increasePoint();
+        std::cout << game.getPoints() << std::endl;
+        game.increasePoint();
+        std::cout << game.getPoints() << std::endl;
+        */
+
 
         //inicio do jogo.....
         Deck deck = Deck();
@@ -59,14 +82,23 @@ int main(){
         std::cout << std::endl;
 
         //Sorteia o primeiro a jogar uma carta.....
-        //firstPlayer = std::rand()%4;
-
+        firstPlayer = std::rand()%4;
+        std::cout << "Jogador é: " << firstPlayer << std::endl;
 /* 
         int card_pos;
         std::cout << "Discarding card: ";
         std::cin >> card_pos;
         hand.discard(card_pos);
-*/
+*/      
+        //IMPEDIR LOOPING INFINITO (MODIFICAR FUTURAMENTE , SÓ PARA TESTE)
+        game.setScore_t1(12);
+
+
+
+        deck.~Deck();//coloquei essa chama aqui só pra poder compilar kkkk
+
+
+
 
         //testa condicao de final de queda
         if(game.getScore_t1() >= 12){
@@ -79,9 +111,7 @@ int main(){
             game.setFinal_scoreboard2();
             game.reset_scoreboard();
         }
-
-        deck.~Deck();//coloquei essa chama aqui só pra poder compilar kkkk
-
+        
         //testa condicao de fim da partida (acabou a melhor de três)
         //ATENCAO: essa deve ser a ultima linha dentro do game looping....
         game_looping = game.check_end();
