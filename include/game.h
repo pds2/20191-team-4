@@ -5,7 +5,7 @@
 
 class Game {
     private:
-       
+        int points;//valor que está valendo p/ mão atual.
         int score_t1, score_t2;//stores the scoreboad
         int final_scoreboard[2];//stores the "best of 3 series" scoreboard
 
@@ -13,6 +13,8 @@ class Game {
         Game(); //Constructor
 
         //getters and setters
+        int getPoints();
+        void setPoints(int pontos);
         int getScore_t1();
         void setScore_t1(int pontos);
         int getScore_t2();
@@ -27,6 +29,7 @@ class Game {
         bool check_end();
         void print_scoreboard();
         void print_winner();
+        void increasePoint();
 };
 
 #endif
