@@ -11,7 +11,7 @@ int main(){
 
     //variables declaration
     bool game_looping = true;
-    int firstPlayer = 0;
+    //int firstPlayer = 0;
     //------------------------------------------------------------------------------
     
     //deck.print_deck();
@@ -65,7 +65,7 @@ int main(){
         //std::cout << "Creating your hand..." << std::endl;
         Hand playerHand = Hand(&deck);//mao player
         //std::cout << "Your hand is:" << std::endl;
-        playerHand.print_hand();
+        //playerHand.print_hand();
 
         Hand ia1Hand = Hand(&deck);//mao IA oponente
         Hand ia2Hand = Hand(&deck);//mao do aliado
@@ -81,7 +81,7 @@ int main(){
         std::cout << std::endl;
 
         //vamos evitar sortear o jogador para nao gerar dificuldades no gameloop!
-        firstPlayer = 0;//nesse caso colocamos sempre o jogador para ser o primeiro
+        //firstPlayer = 0;//nesse caso colocamos sempre o jogador para ser o primeiro
 
 
         int choosenCard;//variavel que vai ser a carta escolhida
@@ -126,7 +126,7 @@ int main(){
                 timeVenc = 2;
                 break;
             }
-            
+
             //CASO RARO DE EMPATE EM QUE TODO MUNDO CANGOU
             else if(miniPlacar[0] == 3 && miniPlacar[1] == 3 && timePrimeira == 0){
                 timeVenc = 0;
