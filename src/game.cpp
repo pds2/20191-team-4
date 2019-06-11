@@ -41,9 +41,9 @@ void Game::increasePoint(){
         this->setPoints(4);
     }
     else if(this->points == 4){
-        this->setPoints(6);
+        this->setPoints(8);
     }
-    else if(this->points == 6){
+    else if(this->points == 8){
         this->setPoints(10);
     }
     else if(this->points == 10){
