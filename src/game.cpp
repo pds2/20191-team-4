@@ -51,6 +51,51 @@ void Game::increasePoint(){
     }
 }
 
+void Game::printHandWinner(GameLogic game_logic){
+
+    if(game_logic.getTimeVenc() == 1){
+        setScore_t1(2);
+        std::cout << "PARABENS, SEU TIME PONTUOU NESSA MAO!" << std::endl;
+        std::cout << std::endl;
+        std::cout << "O PLACAR ATUAL E: Time1 - "<< getScore_t1() << " X "
+                    << getScore_t2() << " - Time2" << std::endl;
+    }
+    if(game_logic.getTimeVenc() == 2){
+        setScore_t2(2);
+        std::cout << "OS SEUS INIMIGOS PONTUARAM NESSA MAO" << std::endl;
+        std::cout << std::endl;
+        std::cout << "O PLACAR ATUAL E: Time1 - "<< getScore_t1() << " X "
+                    << getScore_t2() << " - Time2" << std::endl;
+    }
+}
+
+void Game::printQuedaWinner(){
+
+     //testa condicao de final de queda
+    if(getScore_t1() >= 12){
+
+        setFinal_scoreboard1();
+        reset_scoreboard();
+
+        std::cout << "PARABENS, SEU TIME GANHOU ESSA QUEDA!" << std::endl;
+        std::cout << std::endl;
+        std::cout << "O PLACAR ATUAL DE QUEDAS E: Time1 - "<< getFinal_scoreboard1() << " X "
+                    << getFinal_scoreboard2() << " - Time2" << std::endl;
+        std::cout << std::endl;
+
+    }else if(getScore_t2() >= 12){
+        
+        setFinal_scoreboard2();
+        reset_scoreboard();
+
+        std::cout << "QUE PENA, O TIME OPONENTE GANHOU ESSA QUEDA!" << std::endl;
+        std::cout << std::endl;
+        std::cout << "O PLACAR ATUAL DE QUEDAS E: Time1 - "<< getFinal_scoreboard1() << " X "
+                    << getFinal_scoreboard2() << " - Time2" << std::endl;
+        std::cout << std::endl;
+    }
+}
+
 //getters and setters----------------------------------------------------------------------
 
 int Game::getPoints(){
@@ -83,7 +128,7 @@ int Game::getFinal_scoreboard1() {
 }
 
 void Game::setFinal_scoreboard1 () {
-    this->final_scoreboard[0]++;
+    this->final_scoreboard[0] += 1;
 }
 
 int Game::getFinal_scoreboard2() {
@@ -91,5 +136,5 @@ int Game::getFinal_scoreboard2() {
 }
 
 void Game::setFinal_scoreboard2 () {
-    this->final_scoreboard[1]++;
+    this->final_scoreboard[1] += 1;
 }

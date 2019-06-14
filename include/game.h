@@ -2,6 +2,7 @@
 #define _GAME_H
 
 #include <iostream>
+#include "game_logic.h"
 
 class Game {
     private:
@@ -23,6 +24,8 @@ class Game {
         void setFinal_scoreboard1();
         int getFinal_scoreboard2();
         void setFinal_scoreboard2();
+        void printHandWinner(GameLogic game_logic);
+        void printQuedaWinner();
 
         //other methods
         void reset_scoreboard();
