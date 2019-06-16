@@ -73,5 +73,5 @@ Se alguém esquecer e pedir truco perde a mão.
 No início do jogo quem está com 10 pontos pode decidir se joga ou não ao receber as cartas.
 Se ela opta por não jogar, seu adversário ganha apenas 2 pontos. Se ela jogar e perder, o adversário ganha 4.
 
-##### Documentacão
+## Documentacão
   Neste projeto, foram criadas algumas bibliotecas com implementações que estabelecem as estruturas e métodos essenciais para o andamento do jogo que o grupo se propôs a criar. A seguir, serão explicadas a importância de cada biblioteca para o projeto: 
