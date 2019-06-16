@@ -72,3 +72,14 @@ Se alguém esquecer e pedir truco perde a mão.
 
 No início do jogo quem está com 10 pontos pode decidir se joga ou não ao receber as cartas.
 Se ela opta por não jogar, seu adversário ganha apenas 2 pontos. Se ela jogar e perder, o adversário ganha 4.
+
+## Documentacão
+  Neste projeto, foram criadas algumas bibliotecas com implementações que estabelecem as estruturas e métodos essenciais para o andamento do jogo que o grupo se propôs a criar. A seguir, serão explicadas a importância de cada biblioteca para o projeto: 
+  ##### "Card"
+  Aqui são estabelecidos os possíveis Ranks(Pontuações) inerentes as cartas que constituem o jogo. A seguir, as cartas são criadas, e cada uma recebe seu respectivo valor, com o auxílio da classe Card.
+  
+  ##### "UsualCard"
+  As "UsualCard" são as cartas comuns do jogo, que não possuem valor significativa e dessa forma não são de grande impacto na estrutura do game. Nessa biblioteca, essas cartas são geradas com o auxílio da classe Card descrita acima, onde as UsualCard recebendem dessa classe o Rank, e atribuem a ela um Suit(naipe).
+  
+  ##### "Joker"
+  O Joker é um tipo especial de carta, que herda um Rank da classe Card de acordo com sua cor. Em sua classe, o Joker atribui o valor máximo ao BlackJoker, sendo então o RedJoker a segunda maior carta do jogo. 
