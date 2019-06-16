@@ -83,3 +83,9 @@ Se ela opta por não jogar, seu adversário ganha apenas 2 pontos. Se ela jogar 
   
   ##### "Joker"
   O Joker é um tipo especial de carta, que herda um Rank da classe Card de acordo com sua cor. Em sua classe, o Joker atribui o valor máximo ao BlackJoker, sendo então o RedJoker a segunda maior carta do jogo. 
+  
+  ##### "Deck"
+  O Deck é constituido por um vetor de Cards. Na classe, além da criação do vetor, que possui acesso privado, são criados métodos para embaralar as cartas, puxar uma carta do topo do deck e exibir a mesma.
+  
+  ##### "Hand"
+  A Hand gera também um vetor de Cards, de 3 posições. Ela também se utiliza da classe Deck, na qual são puxadas 3 cardas do top do deck
