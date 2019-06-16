@@ -14,11 +14,11 @@ int main(){
     //variables declaration
     bool game_looping = true;
    
-    Card* selectedCard;
+    // Card* selectedCard;
 
     //------------------------------------------------------------------------------
   
-    //INICIALIZAÇÃO DO JOGO//
+    //INICIALIZAÇÃO DO JOGO
     Game game = Game();
     GameLogic game_logic = GameLogic();
     
@@ -40,7 +40,7 @@ int main(){
         Hand ia3Hand = Hand(&deck);//mao IA oponente
 
         //Game logic happens....
-        game_logic.roundsControl(selectedCard, playerHand, ia1Hand, ia2Hand, ia3Hand);
+        game_logic.roundsControl(playerHand, ia1Hand, ia2Hand, ia3Hand);
 
         game.printHandWinner(game_logic);
         

@@ -123,9 +123,10 @@ int GameLogic::testRoundWinner(int i){//checa vitoria por rodada
     return testHandWinner();
 }
 
-void GameLogic::roundsControl(Card* selectedCard, Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand){
+void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand){
 
     int aux_timeVenc;
+    Card* selectedCard;
 
     //ESSE É O LOOP DA RODADA!!! //
     for(int i=0;i<3;i++){
@@ -169,37 +170,41 @@ void GameLogic::roundsControl(Card* selectedCard, Hand playerHand, Hand ia1Hand,
                 std::cout << "Voce jogou a carta: ";
                 selectedCard->print_card();
                 
-                checkYouWinRound(selectedCard);                    
+                checkYouWinRound(selectedCard);
+                delete selectedCard; // Deletando carta descartada
             }
 
             //vez INIMIGO 1
-            if(j==1){
+            else if(j==1){
                 this->choosenCard = (std::rand()%(3-i)) + 1;
                 selectedCard = ia1Hand.discard(this->choosenCard);
                 std::cout << "Oponente 1 jogou a carta: ";
                 selectedCard->print_card();
                 
                 checkOpponentWinRound(selectedCard);
+                delete selectedCard; // Deletando carta descartada
             }
 
             //vez Parceiro
-            if(j==2){
+            else if(j==2){
                 this->choosenCard = (std::rand()%(3-i)) + 1;
                 selectedCard = ia2Hand.discard(this->choosenCard);
                 std::cout << "Seu Parceiro jogou a carta: ";
                 selectedCard->print_card();
 
                 checkYouWinRound(selectedCard);
+                delete selectedCard; // Deletando carta descartada
             }
 
             //vez INIMIGO 2
-            if(j==3){
+            else if(j==3){
                 this->choosenCard = (std::rand()%(3-i)) + 1;
                 selectedCard = ia3Hand.discard(this->choosenCard);
                 std::cout << "Oponente 2 jogou a carta: ";
                 selectedCard->print_card();
 
                 checkOpponentWinRound(selectedCard);
+                delete selectedCard; // Deletando carta descartada
             }
         }
 

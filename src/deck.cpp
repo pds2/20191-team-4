@@ -50,7 +50,7 @@ int myrand(int i){
 }
 
 void Deck::shuffle_deck(){
-    std::random_shuffle(deck.begin(), deck.end());
+    std::random_shuffle(deck.begin(), deck.end(), myrand);
 }
 
 void show_deck_card(Card *card){

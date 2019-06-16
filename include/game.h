@@ -8,7 +8,7 @@ class Game {
     private:
         int points;//valor que está valendo p/ mão atual.
         int score_t1, score_t2;//stores the scoreboad
-        int final_scoreboard[2];//stores the "best of 3 series" scoreboard
+        int final_scoreboard[2];//stores the "best of 3 series" scoreboard (quedas)
 
     public:
         Game(); //Constructor

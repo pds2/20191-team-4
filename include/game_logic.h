@@ -19,7 +19,7 @@ class GameLogic {
     public:
 
         GameLogic();
-        void roundsControl(Card* selectedCard, Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand);
+        void roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand);
         int testRoundWinner(int i);
         void checkOpponentWinRound(Card *selectedCard);
         void checkYouWinRound(Card *selectedCard);
