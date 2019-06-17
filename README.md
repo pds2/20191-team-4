@@ -88,4 +88,10 @@ Se ela opta por não jogar, seu adversário ganha apenas 2 pontos. Se ela jogar 
   O Deck é constituido por um vetor de Cards. Na classe, além da criação do vetor, que possui acesso privado, são criados métodos para embaralar as cartas, puxar uma carta do topo do deck e exibir a mesma.
   
   ##### "Hand"
-  A Hand gera também um vetor de Cards, de 3 posições. Ela se utiliza da classe Deck, na qual são puxadas 3 cardas do top do deck, e as mesmas são incluidas na mão do jogador.
+  A Hand gera também um vetor de Cards, de 3 posições. Ela se utiliza da classe Deck, na qual são puxadas 3 cartas do top do deck, e as mesmas são incluidas na mão do jogador. A classe também possui um método Discard, que pega uma carta, na posição escolhida pelo jogador e a descarta.
+  
+  ##### "Game"
+  Dentro dessa biblioteca está a classe Game que possui as funções que controlam o jogo, contando os pontos que cada equipe ganhou na rodada, a pontuação atual da equipe na queda, quantas quedas cada equipe ganhou e printar a equipe vencedora, possuindo também funções para terminar uma queda(ao atingir += 12 pontos) e finalizar o loop do jogo.
+  
+  ##### "Game_Logic"
+  Aqui estão as funções relativas as regras do jogo, como quantas rodadas são necessárias para ganhar uma mão(são várias as possibilidades), ver quem jogou a maior carta na rodada e ainda implementa o loop da rodada.
