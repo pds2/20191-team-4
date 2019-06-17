@@ -95,3 +95,6 @@ Se ela opta por não jogar, seu adversário ganha apenas 2 pontos. Se ela jogar 
   
   ##### "Game_Logic"
   Aqui estão as funções relativas as regras do jogo, como quantas rodadas são necessárias para ganhar uma mão(são várias as possibilidades), ver quem jogou a maior carta na rodada e ainda implementa o loop da rodada.
+  
+  ##### "Game_Exception"
+  Trata do caso em que o jogador joga uma carta com posição maior do que disponível em sua mâo. Ex: tentar jogar a carta de posição 3 quando possuir 2 cartas na mão.
