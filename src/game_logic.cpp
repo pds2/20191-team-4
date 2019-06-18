@@ -123,10 +123,11 @@ int GameLogic::testRoundWinner(int i){//checa vitoria por rodada
     return testHandWinner();
 }
 
-void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand){
+void GameLogic::roundsControl(Deck* deck, Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand){
 
     int aux_timeVenc;
     Card* selectedCard;
+    Table table = Table();
 
     //ESSE É O LOOP DA RODADA!!! //
     for(int i=0;i<3;i++){
@@ -171,7 +172,7 @@ void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand 
                 selectedCard->print_card();
                 
                 checkYouWinRound(selectedCard);
-                delete selectedCard; // Deletando carta descartada
+                table.throw_on_table(selectedCard);
             }
 
             //vez INIMIGO 1
@@ -182,7 +183,7 @@ void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand 
                 selectedCard->print_card();
                 
                 checkOpponentWinRound(selectedCard);
-                delete selectedCard; // Deletando carta descartada
+                table.throw_on_table(selectedCard);
             }
 
             //vez Parceiro
@@ -193,7 +194,7 @@ void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand 
                 selectedCard->print_card();
 
                 checkYouWinRound(selectedCard);
-                delete selectedCard; // Deletando carta descartada
+                table.throw_on_table(selectedCard);
             }
 
             //vez INIMIGO 2
@@ -204,7 +205,7 @@ void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand 
                 selectedCard->print_card();
 
                 checkOpponentWinRound(selectedCard);
-                delete selectedCard; // Deletando carta descartada
+                table.throw_on_table(selectedCard);
             }
         }
 
@@ -216,7 +217,14 @@ void GameLogic::roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand 
             break;
         }
     }
+    
+    //throw the remaing cards on the table
+    playerHand.discard_hand(&table);
+    ia1Hand.discard_hand(&table);
+    ia2Hand.discard_hand(&table);
+    ia3Hand.discard_hand(&table);
 
+    table.recollect_cards(deck); //put the cards back on the deck
 }
 
 //getters and setters..............................
