@@ -72,3 +72,6 @@ Card* Deck::draw_card(){
     return card; // return first card
 }
 
+void Deck::insert_card(Card* card){
+    this->deck.push_back(card);
+}

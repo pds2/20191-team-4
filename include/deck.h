@@ -14,6 +14,7 @@ class Deck {
         void shuffle_deck(); //Shuffle the cards of deck
         void print_deck(); //Print all the cards in deck
         Card* draw_card(); //Draw one card from the top of the deck
+        void insert_card(Card* card); //Put one card in the deck
 };
 
 #endif

@@ -4,6 +4,7 @@
 #include <iostream>
 #include "card.h"
 #include "hand.h"
+#include "table.h"
 #include "game_exception.h"
 
 class GameLogic {
@@ -19,7 +20,7 @@ class GameLogic {
     public:
 
         GameLogic();
-        void roundsControl(Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand);
+        void roundsControl(Deck* deck, Hand playerHand, Hand ia1Hand, Hand ia2Hand, Hand ia3Hand);
         int testRoundWinner(int i);
         void checkOpponentWinRound(Card *selectedCard);
         void checkYouWinRound(Card *selectedCard);

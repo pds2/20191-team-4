@@ -21,7 +21,8 @@ int main(){
     //INICIALIZAÇÃO DO JOGO
     Game game = Game();
     GameLogic game_logic = GameLogic();
-    
+    Deck deck = Deck();
+
     srand(time(0));
 
     //GAME LOOPING//
@@ -30,7 +31,6 @@ int main(){
         //pontos da partida inicial.
         game.setPoints(2);
 
-        Deck deck = Deck();
         deck.shuffle_deck();
 
         //cria a mao do player e das tres IA's....
@@ -40,7 +40,7 @@ int main(){
         Hand ia3Hand = Hand(&deck);//mao IA oponente
 
         //Game logic happens....
-        game_logic.roundsControl(playerHand, ia1Hand, ia2Hand, ia3Hand);
+        game_logic.roundsControl(&deck, playerHand, ia1Hand, ia2Hand, ia3Hand);
 
         game.printHandWinner(game_logic);
         

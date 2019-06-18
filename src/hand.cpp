@@ -1,4 +1,5 @@
 #include "hand.h"
+#include "table.h"
 
 Hand::Hand(Deck* deck){
     for(int i=0; i<HAND_SIZE; i++){
@@ -34,4 +35,16 @@ Card* Hand::discard(int card_pos){
 
     this->hand.erase(it);
     return card;
+}
+
+void Hand::discard_hand(Table *table){
+    std::vector<Card*>::iterator it;
+    for(it = this->hand.begin(); it != this->hand.end(); ++it){
+        table->throw_on_table(*it);
+    }
+    this->hand.clear();
+}
+
+int Hand::hand_size(){
+    return this->hand.size();
 }
