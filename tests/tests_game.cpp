@@ -47,4 +47,9 @@ TEST_CASE("03 - Testando pontuacao das equipes/funcionalidades") {
 	int scoreT2 = game.getFinal_scoreboard2();
 	DOCTEST_CHECK(pontosT2 == 0);
 	DOCTEST_CHECK(scoreT2 == 1);
+	
+	game.setFinal_scoreboard1();
+	scoreT1 = game.getFinal_scoreboard1();
+	DOCTEST_CHECK(scoreT1 == 2);
+	DOCTEST_CHECK(game.check_end() == false);
 }
